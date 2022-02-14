@@ -1,19 +1,15 @@
 *{
     padding:0;
     margin:0;
-}
-
-
-*{
-    padding:0;
-    margin:0;
     box-sizing: border-box;
 }
 .calculator{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem 1rem;
-    margin: 1rem;
+    margin: 10% 5% 5% 5%;
+
+
     .calculator__header{
         grid-column: span 4;
         border: 1px solid black;
@@ -25,4 +21,34 @@
     #equal_button{
         grid-column: span 2;
     }
+}
+@media screen and (min-width: 768px){
+    .calculator{
+        margin: 10% 5% 5% 5%;
+        max-width:max-content;
+        .calculator__header{
+            font-size: 5rem;
+        }
+        .calculator__button{
+            font-size:5rem;
+            
+
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .calculator{
+        margin: 10% 5% 5% 5%;
+        max-width:max-content;
+        .calculator__header{
+            font-size: 7rem;
+        }
+        .calculator__button{
+            font-size:7rem;
+            
+
+        }
+
+}
 }
