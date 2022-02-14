@@ -24,25 +24,25 @@
 
 @media screen and (min-width: 768px) {
   .calculator {
-    margin: 10% 5% 5% 5%;
+    margin: 7% 5% 5% 5%;
     max-width: max-content;
   }
   .calculator .calculator__header {
-    font-size: 5rem;
+    font-size: 1.5rem;
   }
   .calculator .calculator__button {
-    font-size: 5rem;
+    font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 1024px) {
   .calculator {
-    margin: 10% 5% 5% 5%;
+    margin: 7% 5% 5% 5%;
     max-width: max-content;
   }
   .calculator .calculator__header {
-    font-size: 7rem;
+    font-size: 2rem;
   }
   .calculator .calculator__button {
-    font-size: 7rem;
+    font-size: 2rem;
   }
 }
