@@ -4,87 +4,25 @@
 }
 
 
-.layout{
-    background-color: white;
-    height:100vh;
-    width: 100vw;
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-
-    .layout__header{
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items:center;
-        background-color: #3D4655;
-        width: 80vw;
-        height:25vh;
-        padding: 1rem;
-        .layout__header__result{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 2px solid white;
-            background-color:#FCFCFC;
-            padding:1.3rem;
-            margin:1rem;
-            width: 40vw;
-        }
-        .layout__header__operation{
-            display: flex;
-            justify-content: center;
-            align-items:center;
-            width: 30vw;
-            height:5vh;
-            border: 2px solid white;
-            background-color:#FCFCFC;
-            padding:0.5rem;
-            margin:0.5rem;
-        }
-    }
-    .calculator{
-        background-color:white ;
-        width: 20rem;
-        height:auto;
-        padding:2rem;
-        margin:2rem;
-        display:grid;
-        grid-template-areas: 
-        "AC c percent div"
-        "seven eight nine mult"
-        "four five six sum"
-        "one two three minus"
-        "zer comma equal equal";
-        #restart_button{grid-area: AC;}
-        #delete_button{grid-area: c;}
-        #percentage_button{grid-area: percent;}
-        #division_button{grid-area: div;}
-        #mutliplication_button{grid-area: mult;}
-        #sum_button{grid-area: sum;}
-        #minus_button{grid-area: minus;}
-        #equal_button{grid-area: equal;}
-        #dot_button{grid-area: comma;}
-        #zero_button{grid-area: zer;}
-        #one_button{grid-area: one;}
-        #two_button{grid-area: two;}
-        #three_button{grid-area: three;}
-        #four_button{grid-area: four;}
-        #five_button{grid-area: five;}
-        #six_button{grid-area: six;}
-        #seven_button{grid-area: seven;}
-        #eight_button{grid-area: eight;}
-        #nine_button{grid-area: nine;}
-        align-items: center;
-    
-        grid-gap: 2rem 2rem;
-        .calculator__button{
-            background-color:#4B555F;
-            font-size: 2rem;
-        }
-
-    }
-
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
 }
-
+.calculator{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem 1rem;
+    margin: 1rem;
+    .calculator__header{
+        grid-column: span 4;
+        border: 1px solid black;
+        padding: 2rem;
+    }
+    .calculator__button{
+        font-size: 2rem;
+    }
+    #equal_button{
+        grid-column: span 2;
+    }
+}
