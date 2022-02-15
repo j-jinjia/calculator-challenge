@@ -5,31 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+    <script src="script.dev.js" defer></script>
 </head>
 <body>
-    <main class = calculator>
-            <div class = calculator__header>Screen</div>
-            <button class="calculator__button" id="restart_button">AC</button>
-            <button class="calculator__button" id="delete_button">C</button>
-            <button class="calculator__button" id="percentage_button">%</button>
-            <button class="calculator__button" id="division_button">÷</button>
-            <button class="calculator__button" id="seven_button">7</button>
-            <button class="calculator__button" id="eight_button">8</button>
-            <button class="calculator__button" id="nine_button">9</button>
-            <button class="calculator__button" id="mutliplication_button">*</button>
-            <button class="calculator__button" id="four_button">4</button>
-            <button class="calculator__button" id="five_button">5</button>
-            <button class="calculator__button" id="six_button">6</button>
-            <button class="calculator__button" id="sum_button">+</button>
-            <button class="calculator__button" id="one_button">1</button>
-            <button class="calculator__button" id="two_button">2</button>
-            <button class="calculator__button" id="three_button">3</button>
-            <button class="calculator__button" id="minus_button">-</button>
-            <button class="calculator__button" id="zero_button">0</button>
-            <button class="calculator__button" id="dot_button">.</button>
-            <button class="calculator__button" id="equal_button">=</button>
-    </main>
+    <section class ="display">
+        <h1 class="display__result">result</h1>
+        <p class ="display__operation">operation</p>
+    </section>
+    <section class =calculator>
+        <button class="calculator__button calculator__restart" id="restart_button">AC</button>
+        <button class="calculator__button calculator__delete" id="delete_button">C</button>
+        <button class="calculator__button calculator__percentage" id="percentage_button">%</button>
+        <button class="calculator__button calculator__operator" id="division_button">÷</button>
+        <button class="calculator__button calculator__number" id="seven_button">7</button>
+        <button class="calculator__button calculator__number" id="eight_button">8</button>
+        <button class="calculator__button calculator__number" id="nine_button">9</button>
+        <button class="calculator__button calculator__operator" id="mutliplication_button">x</button>
+        <button class="calculator__button calculator__number" id="four_button">4</button>
+        <button class="calculator__button calculator__number" id="five_button">5</button>
+        <button class="calculator__button calculator__number" id="six_button">6</button>
+        <button class="calculator__button calculator__operator" id="sum_button">+</button>
+        <button class="calculator__button calculator__number" id="one_button">1</button>
+        <button class="calculator__button calculator__number" id="two_button">2</button>
+        <button class="calculator__button calculator__number" id="three_button">3</button>
+        <button class="calculator__button calculator__operator" id="minus_button">-</button>
+        <button class="calculator__button calculator__number" id="zero_button">0</button>
+        <button class="calculator__button calculator__decimal" id="dot_button">.</button>
+        <button class="calculator__button calculator__equal" id="equal_button">=</button>
+        
+    </section>
+
     
 </body>
 </html>
