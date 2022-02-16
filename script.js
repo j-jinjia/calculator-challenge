@@ -43,12 +43,12 @@ const clear = (number1, number2, operator) => {
   }
 /**Equal button (=): On click, performs calculate function and checks for which operator is being used to perform the calculation. Then it displays on screen the result and clears the operation. */
 equalButton.addEventListener('click', (event)=> {
-    screenResult.innerHTML = calculate(number1, num2, operator);
+    screenResult.innerHTML = operation(number1, num2, operator);
     screenOperation.innerHTML = clear(number1, number2, operator);
     
     
 });
-const calculate = (number1, number2, operator) => {
+const operation = (number1, number2, operator) => {
     if (operator === "+") {
       return parseInt(number1) + parseInt(number2);
     } else if (operator === "-") {

@@ -51,11 +51,11 @@ var clear = function clear(number1, number2, operator) {
 
 
 equalButton.addEventListener('click', function (event) {
-  screenResult.innerHTML = calculate(number1, num2, operator);
+  screenResult.innerHTML = operation(number1, num2, operator);
   screenOperation.innerHTML = clear(number1, number2, operator);
 });
 
-var calculate = function calculate(number1, number2, operator) {
+var operation = function operation(number1, number2, operator) {
   if (operator === "+") {
     return parseInt(number1) + parseInt(number2);
   } else if (operator === "-") {
