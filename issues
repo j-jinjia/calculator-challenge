@@ -1,10 +1,10 @@
 ISSUES
-1.- minus negative numbers displaying wrong values [solved]
-2.- Decimal operations(Rounding)
+1.- minus negative numbers displaying wrong values [Solved]
+2.- Decimal operations(Rounding) [Pending]
 
 ADDITIONAL FEATURES
 1.- Operand can't be first input.  [Pending]
         Using if statement to check wether the first input is a number or operand. If it's number, carry on with the next if statement.
         if it's operand, display on screen " Syntax Error"
 2.- operations for more than 2 inputs/group numbers [Pending]
-3.- Improvement: On pressing percentage: display directly the result instead of clicking equal button. 
+3.- Improvement: On pressing percentage: display directly the result instead of clicking equal button.  [Pending]
