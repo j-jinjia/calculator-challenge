@@ -68,29 +68,30 @@ body {
 
 @media screen and (min-width: 768px) {
   .display {
-    margin: 2.7rem;
-    padding: 2rem;
+    margin: 2rem;
+    padding: 1.5rem;
     height: 25vh;
     width: 90vw;
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .calculator {
-    margin: 2.7rem;
+    margin: 1.5rem;
   }
 }
 @media screen and (min-width: 1024px) {
   .display {
-    margin: 3rem;
+    margin: 2rem;
     padding: 2rem;
-    height: 20vh;
-    font-size: 3rem;
+    height: 30vh;
+    font-size: 2.5rem;
   }
 
   .calculator {
-    margin: 3rem;
+    margin: 1.5rem;
+    padding: 2rem;
   }
   .calculator .calculator__button {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
