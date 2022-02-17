@@ -85,10 +85,3 @@ var onRestartButtonClick = function onRestartButtonClick(event) {
 };
 
 restartButton.addEventListener("click", onRestartButtonClick);
-/**C button (delete). When clicking delete button (C) remove the last input on the screen. */
-
-var onDeleteButtonClick = function onDeleteButtonClick(event) {
-  screenOperation.innerText = screenOperation.innerHTML.slice(0, -1);
-};
-
-deleteButton.addEventListener("click", onDeleteButtonClick);

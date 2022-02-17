@@ -3,40 +3,48 @@
     margin:0;
     box-sizing: border-box;
 }
+body{
+    background-color: #0a0908 ;
+}
 .display{
-    margin: 10px;
-    padding:10px;
-    height:60px;
-    width:210px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1.3rem;
+    padding:1rem;
+    height:20vh;
+    width:90vw;
     text-align: right;
-    border: 1px solid black;
+    border: 2px solid white;
     border-radius: 1rem;
-    font-size: 14px;
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #22333b;
+    .display__result{
+        color:white;
+    }
+    .display__operation{
+        color:#BCC3CB;
+    }
 
 }
 .calculator{
-    margin:10px;
-    padding:10px;
+    margin:1rem;
+    padding:1rem;
     display:grid;
     grid-template-columns: repeat(4,1fr);
-    justify-items: center;
     grid-gap: 5px;
-    width: 210px;
-    height: 50px;
-    
-    #equal_button{
-        grid-column: span 2;
-        width: 90px;
-    }
-    #restart_button{
-        grid-column:span 2;
-        width: 90px;
-    }
+    width: 90vw;
+    height: 10vh;
     .calculator__button{
-        height: 40px;
-        width:40px;
+        background-color: #eae0d5;
+        height:10vh;
         border-radius: 10px;
-        border:1px solid black;
+        border:1.5px solid white;
+        justify-items: stretch;
+        align-items: stretch;
+        font-size: 2rem;
+        font-family: 'Orbitron', sans-serif;
         &:hover{
             background-color: black;
             color: white;
@@ -44,35 +52,44 @@
         }
 
     }
+    .calculator__operator{
+        background-color: #c6ac8f;
+    }
+    #equal_button{
+        grid-column: span 2;
+        background-color: #8a6b46;
+    }
+    #restart_button{
+        grid-column:span 2;
+        background-color: #8a6b46;
+    }
     
 }
-/**@media screen and (min-width: 768px){
-    .calculator{
-        margin: 7% 5% 5% 5%;
-        max-width:max-content;
-        .calculator__header{
-            font-size: 1.5rem;
-        }
-        .calculator__button{
-            font-size:1.5rem;
-            
-
-        }
+@media screen and (min-width: 768px){
+    .display{
+        margin: 2.7rem;
+        padding:2rem;
+        height:25vh;
+        width:90vw;
+        font-size: 3rem;
     }
+    .calculator{
+        margin:2.7rem;
+    }
+
 }
 
 @media screen and (min-width: 1024px){
+    .display{
+        margin: 3rem;
+        padding:2rem;
+        height:20vh;
+        font-size: 3rem;
+    }
     .calculator{
-        margin: 7% 5% 5% 5%;
-        max-width:max-content;
-        .calculator__header{
-            font-size: 2rem;
-        }
+        margin:3rem;
         .calculator__button{
-            font-size:2rem;
-            
-
+            font-size: 3rem;
         }
-
+    }
 }
-}*/
