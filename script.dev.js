@@ -48,7 +48,7 @@ var operation = function operation(number1, number2, operator) {
   if (operator === "+") {
     return number1 + number2;
   } else if (operator === "-") {
-    return number1 - number2;
+    return number2 - number1;
   } else if (operator === "x") {
     return number1 * number2;
   } else if (operator === "÷") {
