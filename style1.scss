@@ -28,6 +28,10 @@
         grid-column: span 2;
         width: 90px;
     }
+    #restart_button{
+        grid-column:span 2;
+        width: 90px;
+    }
     .calculator__button{
         height: 40px;
         width:40px;
@@ -40,6 +44,7 @@
         }
 
     }
+    
 }
 /**@media screen and (min-width: 768px){
     .calculator{

@@ -29,6 +29,10 @@
   grid-column: span 2;
   width: 90px;
 }
+.calculator #restart_button {
+  grid-column: span 2;
+  width: 90px;
+}
 .calculator .calculator__button {
   height: 40px;
   width: 40px;
