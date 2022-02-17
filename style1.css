@@ -40,3 +40,34 @@
   color: white;
   cursor: pointer;
 }
+
+/**@media screen and (min-width: 768px){
+    .calculator{
+        margin: 7% 5% 5% 5%;
+        max-width:max-content;
+        .calculator__header{
+            font-size: 1.5rem;
+        }
+        .calculator__button{
+            font-size:1.5rem;
+
+
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .calculator{
+        margin: 7% 5% 5% 5%;
+        max-width:max-content;
+        .calculator__header{
+            font-size: 2rem;
+        }
+        .calculator__button{
+            font-size:2rem;
+
+
+        }
+
+}
+}*/

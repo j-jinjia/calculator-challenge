@@ -1,45 +1,83 @@
 //global variables
-/** Getting the innerHTML value when clicking on numbers button (1,2,3,4,5,6,7,8,9). Probably an array*/
+let number1="";
+let number2=""
+let operator;
+let result;
 
-const numberButtons = document.getElementsByClassName("calculator__number");
+let numberButtons = document.querySelectorAll(".calculator__number");
+let operationButtons = document.querySelectorAll(".calculator__operator");
+const restartButton = document.querySelector(".calculator__restart");
+const screenResult = document.querySelector(".display__result");
+const screenOperation = document.querySelector(".display__operation")
+const equalButton = document.querySelector(".calculator__equal")
+
+/**numberButtons: Looping through each number button and on click logging the button value into the operation screen */
+
+const onNumberButtonsClick = (event) => {
+    screenOperation.innerText += event.target.innerText;
+    number1+=event.target.innerText;
+};
+for (let index = 0; index < numberButtons.length; index++) {
+    numberButtons[index].addEventListener("click", onNumberButtonsClick);
+
+};
+
+/**operationButton */
+const onOperationButtonsClick = (event) => {
+    screenOperation.innerText += event.target.innerText;
+    number2 = number1;
+    number1="";
+    operator=event.target.innerText;
+};
+for (let index = 0; index < operationButtons.length; index++) {
+    operationButtons[index].addEventListener("click", onOperationButtonsClick);
+};
 
 
-/** Getting the value of operator when clicking on operator buttons (+,-,*,/) */
-const operatorButton = document.getElementsByClassName("calculator__operator");
-/** Getting the value of restart button when clicking on AC button*/
-const restartButton = document.getElementsByClassName("calculator__restart");
-/** Getting the value of delete button when clicking on C button */
-const deleteButton = document.getElementsByClassName("calculator__delete");
-/** Getting the value of percentage when clicking on % button*/
-const percentageButton = document.getElementsByClassName("calculator__percentage");
-/** Getting the value of decimal  when clicking on . button*/
-const decimalButton = document.getElementsByClassName("calculator__decimal");
-/** Getting the value of equal when clicking on = button*/
-const equalButton = document.getElementsByClassName("calculator__equal");
 
-//functions
+/**Equal button (=): On click, performs calculate function and checks for which operator is being used to perform the calculation. Then it displays on screen the result and clears the operation. */
 
-/** function for numbers button*/
-/** Function for operators */
-/** function for restart button*/
-/** function for delete button*/
-/** function for percentage button*/
-/** function for equal button*/
-/** function for decimal button*/
 
-//logic
-/** Looping through the number buttons array to give them click function and eventlistener
- * for index equal 0; index smaller than the length of the array, add 1 to index
- *  current index in numberButtons add the eventListener of click with the function_____
-*/
-for (let index=0; index<numberButtons.length; index++){
-    numberButtons[index].addEventListener("click", );
-}
-/** Looping through the operator button array to give them click function and eventlistener
- * for index equal 0; index smaller than the length of the array, add 1 to index
- *  current index in operatorButton add the eventListener of click with the function_____
-*/
-for (let index=0; index<operatorButtons.length; index++){
-    operatorButton[index].addEventListener("click", );
-    console.log("operatorButton");
-}
+const operation = (number1, number2, operator) => {
+
+    if (typeof number1 !== "number" || typeof number2 !== "number" ){
+        number1= Number(number1);
+        number2=Number(number2);
+    }
+    if (operator === "+" ) {
+        return number1 + number2;
+    } else if (operator === "-"){
+        return number1 - number2;
+    } else if (operator === "x") {
+        return number1 * number2;
+    } else if (operator === "÷") {
+        return number2 / number1;
+    } else if (operator === "%") {
+        return number1 / 100 || number2 / 100;
+    } else {
+        return;
+    }
+    
+};
+equalButton.addEventListener('click', (event)=> {
+    screenResult.innerHTML = operation(number1, number2, operator);
+    //screenOperation.innerHTML ="";
+    
+    
+});
+
+/** AC button (restart). Defined function of clearing the screen display when AC button is clicked by adding event listener to the button. */
+const onRestartButtonClick = (event) => {
+    screenOperation.innerText ="";
+    screenResult.innerText="";
+    number1="";
+    number2="";
+    operator="";
+};
+    
+restartButton.addEventListener("click", onRestartButtonClick);
+
+    
+    
+    
+    

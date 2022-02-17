@@ -18,7 +18,7 @@
 .calculator .calculator__button {
   font-size: 2rem;
 }
-.calculator #equal_button {
+.calculator .calculator__equal {
   grid-column: span 2;
 }
 
