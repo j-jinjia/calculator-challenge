@@ -13,7 +13,7 @@ var screenOperation = document.querySelector(".display__operation");
 var equalButton = document.querySelector(".calculator__equal");
 /**numberButtons: Looping through each number button and on click logging the button value into the operation screen 
  * When clicking in any number button (0,1,2,3,4,5,6,7,8,9,.) display on screen.
- * All the numbers pressed are stored in a variable
+ * All the numbers pressed are stored in a variable number1
 */
 
 var onNumberButtonsClick = function onNumberButtonsClick(event) {
@@ -27,8 +27,8 @@ for (var index = 0; index < numberButtons.length; index++) {
 
 ;
 /**operationButton When clicking in any operator button (plus, minus, miltiplyer, division and percentage) display on screen.
- * Store the first number into another variable and clear the first number variable in order to reuse. 
- * Store operator symbol. 
+ * Store the first number into variable number2 and clear the  number1 variable in order to reuse. 
+ * Store operator symbol in operator variable. 
  */
 
 var onOperationButtonsClick = function onOperationButtonsClick(event) {
@@ -72,7 +72,7 @@ var operation = function operation(number1, number2, operator) {
 equalButton.addEventListener('click', function (event) {
   screenResult.innerHTML = operation(number1, number2, operator);
 });
-/** AC button (restart). Defined function of clearing the screen display when AC button is clicked by adding event listener to the button. 
+/** Clear button (Clear). Defined function of clearing the screen display when Clear button is clicked by adding event listener to the button. 
  * When restart button is clicked, screen display is cleared and variables storing numbers and operators are cleared too.
 */
 
