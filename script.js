@@ -79,11 +79,5 @@ const onRestartButtonClick = (event) => {
     operator="";
 };
 restartButton.addEventListener("click", onRestartButtonClick);
-/**C button (delete). When clicking delete button (C) remove the last input on the screen. */ 
 
-const onDeleteButtonClick = (event) =>{
-    screenOperation.innerText = screenOperation.innerHTML.slice(0,-1);
-}
-
-deleteButton.addEventListener("click", onDeleteButtonClick);
     
