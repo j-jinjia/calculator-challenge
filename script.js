@@ -5,20 +5,21 @@ let operator;
 let result;
 
 let numberButtons = document.querySelectorAll(".calculator__number");
-const operationButtons = document.getElementsByClassName(".calculator__operator");
-const restartButton = document.querySelector(".calculator__restart");
-const screenResult = document.querySelector(".display__result");
+let operationButtons = document.querySelectorAll(".calculator__operator");
+let restartButton = document.querySelector(".calculator__restart");
+const screenResult = document.getElementsByClassName("display__result");
 const screenOperation = document.querySelector(".display__operation")
 const equalButton = document.querySelector(".calculator__equal")
-
 
 /**numberButtons: Looping through each number button and on click logging the button value into the operation screen */
 
 const onNumberButtonsClick = (event) => {
     screenOperation.innerText += event.target.innerText;
+    number1=event.targe.innerText;
 };
 for (let index = 0; index < numberButtons.length; index++) {
     numberButtons[index].addEventListener("click", onNumberButtonsClick);
+
 };
 
 /**operationButton */
@@ -32,31 +33,36 @@ for (let index = 0; index < operationButtons.length; index++) {
 restartButton.addEventListener("click", (onRestartButtonClick));
 
 const onRestartButtonClick = (event) => {
-    screenOperation.innerHTML = clear(number1, number2, operator);
-    screenResult.innerHTML = clear(number1, number2, operator);
+    screenOperation.innerHTML="";
+    screenResult.innerText="";
+    console.log("hello")
+    //screenOperation.innerHTML = clear(number1, number2, operator);
+    //screenResult.innerHTML = clear(number1, number2, operator);
 
 };
-const clear = (number1, number2, operator) => {
-    if (num1 || num2 || operator) {
+/**const clear = (number1, number2, operator) => {
+    if (number1 || number2 || operator) {
       return "";
     }
-  }
+  }*/
 /**Equal button (=): On click, performs calculate function and checks for which operator is being used to perform the calculation. Then it displays on screen the result and clears the operation. */
 equalButton.addEventListener('click', (event)=> {
-    screenResult.innerHTML = operation(number1, num2, operator);
-    screenOperation.innerHTML = clear(number1, number2, operator);
+    screenResult.innerHTML = operation(number1, number2, operator);
+    //screenOperation.innerHTML = clear(number1, number2, operator);
     
     
 });
 const operation = (number1, number2, operator) => {
     if (operator === "+") {
-      return parseInt(number1) + parseInt(number2);
+        return Number(number1) + Number(number2);
     } else if (operator === "-") {
-      return parseInt(number) - parseInt(number2);
+        const result = parseInt(number) - parseInt(number2);
+      return result
     } else if (operator === "x") {
       return parseInt(number1) * parseInt(number2);
     } else if (operator === "÷") {
-      return parseInt(number1) / parseInt(number2);
+        const result = parseInt(number1) / parseInt(number2);
+      return result 
     } else if (operator === "%") {
       return parseInt(number1) / 100 || parseInt(number2) / 100;
     } else {
