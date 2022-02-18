@@ -2,7 +2,7 @@
 let number1="";
 let number2=""
 let operator;
-
+//DOM Elements for every button and screen display . 
 let numberButtons = document.querySelectorAll(".calculator__number");
 let operationButtons = document.querySelectorAll(".calculator__operator");
 const restartButton = document.querySelector(".calculator__restart");

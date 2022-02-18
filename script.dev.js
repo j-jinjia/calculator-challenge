@@ -3,7 +3,8 @@
 //global variables
 var number1 = "";
 var number2 = "";
-var operator;
+var operator; //DOM Elements for every button and screen display . 
+
 var numberButtons = document.querySelectorAll(".calculator__number");
 var operationButtons = document.querySelectorAll(".calculator__operator");
 var restartButton = document.querySelector(".calculator__restart");
