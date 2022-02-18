@@ -44,17 +44,17 @@ const operation = (number1, number2, operator) => {
  * This allows to check for data type before running the second if statement block with operators.
  */
     if (typeof number1 !== "number" || typeof number2 !== "number" ){
-        number1= Number(number1);
+        number1=Number(number1);
         number2=Number(number2);
     }
     if (operator === "+" ) {
-        return number1 + number2;
+        return (number2 + number1);
     } else if (operator === "-"){
-        return number2 - number1;
+        return (number2 - number1);
     } else if (operator === "x") {
-        return number1 * number2;
+        return (number2 * number1);
     } else if (operator === "÷") {
-        return number2 / number1;
+        return (number2 / number1);
     } else if (operator === "%") {
         return number1 / 100 || number2 / 100;
     } else {
@@ -63,6 +63,10 @@ const operation = (number1, number2, operator) => {
 };
 equalButton.addEventListener('click', (event)=> {
     screenResult.innerHTML = operation(number1, number2, operator);
+    screenOperation.innerHTML ="";
+    number1="";
+    numbe2r="";
+    operator="";
 });
 
 /** Clear button (Clear). Defined function of clearing the screen display when Clear button is clicked by adding event listener to the button. 

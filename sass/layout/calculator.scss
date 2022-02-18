@@ -1,0 +1,33 @@
+.calculator{
+    @include box (1rem,1rem,10vh,90vw);
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 5px;
+    .calculator__button{
+        background-color: $color-number-buttons;
+        height:10vh;
+        border-radius: 10px;
+        border:1.5px solid $color-text-and-border;
+        justify-items: stretch;
+        align-items: stretch;
+        font-size: 2rem;
+        font-family: $font-family;
+        &:hover{
+            opacity:0.5;
+            cursor:pointer;
+        }
+
+    }
+    .calculator__operator{
+        background-color: $color-operator-buttons;
+    }
+    #equal_button{
+        grid-column: span 2;
+        background-color: $color-other-buttons;
+    }
+    #restart_button{
+        grid-column:span 2;
+        background-color: $color-other-buttons;
+    }
+    
+}

@@ -55,11 +55,11 @@ var operation = function operation(number1, number2, operator) {
   }
 
   if (operator === "+") {
-    return number1 + number2;
+    return number2 + number1;
   } else if (operator === "-") {
     return number2 - number1;
   } else if (operator === "x") {
-    return number1 * number2;
+    return number2 * number1;
   } else if (operator === "÷") {
     return number2 / number1;
   } else if (operator === "%") {
@@ -71,6 +71,10 @@ var operation = function operation(number1, number2, operator) {
 
 equalButton.addEventListener('click', function (event) {
   screenResult.innerHTML = operation(number1, number2, operator);
+  screenOperation.innerHTML = "";
+  number1 = "";
+  numbe2r = "";
+  operator = "";
 });
 /** Clear button (Clear). Defined function of clearing the screen display when Clear button is clicked by adding event listener to the button. 
  * When restart button is clicked, screen display is cleared and variables storing numbers and operators are cleared too.

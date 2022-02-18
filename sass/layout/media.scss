@@ -1,0 +1,24 @@
+@media screen and (min-width: 768px){
+    .display{
+        @include box (2rem,1.5rem,25vh,90vw);
+        font-size: 2rem;
+    }
+    .calculator{
+        margin:1.5rem;
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+    .display{
+        @include box (2rem,2rem,30vh,90vw);
+        font-size: 2.5rem;
+    }
+    .calculator{
+        margin:1.5rem;
+        padding:2rem;
+        .calculator__button{
+            font-size: 2.5rem;
+        }
+    }
+}

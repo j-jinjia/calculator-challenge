@@ -1,0 +1,7 @@
+@mixin box ($size-m,$size-p,$size-h,$size-w){
+    margin:$size-m;
+    padding:$size-p ;
+    height:$size-h;
+    width:$size-w;
+
+};
