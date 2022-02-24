@@ -72,9 +72,9 @@ var operation = function operation(number1, number2, operator) {
 
 equalButton.addEventListener('click', function (event) {
   screenResult.innerHTML = operation(number1, number2, operator);
-  screenOperation.innerHTML = "";
+  screenOperation.innerHTML = "".concat(number2, " ").concat(operator, " ").concat(number1);
   number1 = "";
-  numbe2r = "";
+  number2 = "";
   operator = "";
 });
 /** Clear button (Clear). Defined function of clearing the screen display when Clear button is clicked by adding event listener to the button. 

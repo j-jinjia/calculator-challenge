@@ -63,9 +63,9 @@ const operation = (number1, number2, operator) => {
 };
 equalButton.addEventListener('click', (event)=> {
     screenResult.innerHTML = operation(number1, number2, operator);
-    screenOperation.innerHTML ="";
+    screenOperation.innerHTML =`${number2} ${operator} ${number1}`;
     number1="";
-    numbe2r="";
+    number2="";
     operator="";
 });
 

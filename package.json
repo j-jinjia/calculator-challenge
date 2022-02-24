@@ -1,0 +1,24 @@
+{
+  "name": "calculator-challenge",
+  "version": "1.0.0",
+  "description": "This is my first project. It is made with HTML, CSS and JavaScript. \r It is a simple calculator that will take up to 2 inputs from users clicks and return an output as result.\r The operations that can run are addition, subtraction, multiplication,division and percentage.\r It includes a clear button as well as decimal button.",
+  "main": "script.dev.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-jinjia/calculator-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/j-jinjia/calculator-challenge/issues"
+  },
+  "homepage": "https://github.com/j-jinjia/calculator-challenge#readme",
+  "devDependencies": {
+    "cypress": "^9.5.0"
+  }
+}
