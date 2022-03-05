@@ -62,18 +62,14 @@ const operation = (num1, num2, symbol) => {
         num1=Number(num1);
         num2=Number(num2);
     }
+    /** If the numbers aren't recognised (multiple decimal points : 2..2 for example)  return a message.*/
+    if (isNaN(num1) || isNaN(num2)){
+        return "Type a valid number"
+    }
     const result = calculate(num1, num2, symbol)
-    if (result == null ) return
-    if (result == undefined){
-        return "Syntax Error"
-    }
-    if (typeof result == NaN){
-        return "Syntax Error"
-    }else {
-        return result
-
-    }
+    return result 
   };
+  /** Equal button: on click, will display the operation, the result and clear the variables */
 const onEqualButtonclick = () =>{
     screenResult.innerHTML = operation(number1, number2, operator);
     screenOperation.innerHTML =`${number2} ${operator} ${number1}`;
