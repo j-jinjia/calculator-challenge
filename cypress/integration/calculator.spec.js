@@ -52,7 +52,7 @@ describe("Calculator tests", ()=>{
         cy.get('.display__result').should("contain",2);
         cy.get('.display__operation').should("contain", "6 ÷ 3")
     });
-    it("should not allow more than 1 decimal point, So 6..6 +3 should return error", ()=>{
+    it("should not allow more than 1 decimal point, So 6..6 +3 should return Type a valid number", ()=>{
         //write our test case in here
         //1. Arrange
         cy.visit("localhost:5502/index.html")
@@ -65,8 +65,7 @@ describe("Calculator tests", ()=>{
         cy.get('.calculator > :nth-child(14)').click();
         cy.get('#equal_button').click();
         //3. Assert
-        cy.get('.display__result').should("contain","Syntax Error");
-        cy.get('.display__operation').should("contain", "6..6 ÷ 3")
+        cy.get('.display__result').should("contain","Type a valid number");
+        cy.get('.display__operation').should("contain", "6..6 + 3")
     });
-
 });

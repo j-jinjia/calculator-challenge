@@ -39,35 +39,45 @@ for (let index = 0; index < operationButtons.length; index++) {
 };
 
 /**Equal button (=): On click, performs calculate function and checks for which operator is being used to perform the calculation. Then it displays on screen the result and clears the operation. */
-const operation = (number1, number2, operator) => {
-/**Cheking if either number1 or number2 are number data type. if either one is a number data type, convert them into number data type. 
- * This allows to check for data type before running the second if statement block with operators.
- */
-    if (typeof number1 !== "number" || typeof number2 !== "number" ){
-        number1=Number(number1);
-        number2=Number(number2);
+ const calculate = (intNum1, intNum2, op) => {
+    if (op === "+" ) {
+      return (intNum2 + intNum1);
+  } else if (op === "-"){
+      return (intNum2 - intNum1);
+  } else if (op === "x") {
+      return (intNum2 * intNum1);
+  } else if (op === "÷") {
+      return (intNum2 / intNum1);
+  } else if (op === "%") {
+      return intNum1/ 100 ||intNum2  / 100;
+  } else {
+      return ("Syntax Error");
+  }
+  }
+const operation = (num1, num2, symbol) => {
+  /**Cheking if either number1 or number2 are number data type. if either one is a number data type, convert them into number data type. 
+   * This allows to check for data type before running the second if statement block with operators.
+   */
+    if (typeof num1 !== "number" || typeof num2 !== "number" ){
+        num1=Number(num1);
+        num2=Number(num2);
     }
-    if (operator === "+" ) {
-        return (number2 + number1);
-    } else if (operator === "-"){
-        return (number2 - number1);
-    } else if (operator === "x") {
-        return (number2 * number1);
-    } else if (operator === "÷") {
-        return (number2 / number1);
-    } else if (operator === "%") {
-        return number1 / 100 || number2 / 100;
-    } else {
-        return ("Syntax Error");
+    /** If the numbers aren't recognised (multiple decimal points : 2..2 for example)  return a message.*/
+    if (isNaN(num1) || isNaN(num2)){
+        return "Type a valid number"
     }
-};
-equalButton.addEventListener('click', (event)=> {
+    const result = calculate(num1, num2, symbol)
+    return result 
+  };
+  /** Equal button: on click, will display the operation, the result and clear the variables */
+const onEqualButtonclick = () =>{
     screenResult.innerHTML = operation(number1, number2, operator);
     screenOperation.innerHTML =`${number2} ${operator} ${number1}`;
     number1="";
     number2="";
     operator="";
-});
+}
+equalButton.addEventListener('click', onEqualButtonclick);
 
 /** Clear button (Clear). Defined function of clearing the screen display when Clear button is clicked by adding event listener to the button. 
  * When restart button is clicked, screen display is cleared and variables storing numbers and operators are cleared too.
